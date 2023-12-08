@@ -1,0 +1,73 @@
+﻿.linha {
+    width: 98%;
+    height: 2px;
+    background-color: black;
+    margin-top: 10px;
+}
+
+.nome {
+    text-align: center;
+}
+
+.box-2 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.diahora {
+    margin-top: 20px;
+    color: gray;
+}
+
+.geral {
+    width: 80%;
+    height: 480px;
+    font-family: 'Courier New', Courier, monospace;
+    border: 1px solid black;
+    padding: 10px;
+    margin-left: 10%;
+}
+
+.fontepri {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.fonteprim {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.iza {
+    margin-top: 20px;
+}
+
+.izale {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.resultado {
+    display: flex;
+    font-size: 20px;
+}
+
+.logo {
+    position: absolute;
+    height: 100px;
+    margin-left: 32.5%;
+}
+
+.info {
+    font-size: large;
+    font-size: 25px;
+}
+
+.geralzim {
+    margin-top: 130px;
+}
+
+.infor {
+    font-size: large;
+    font-size: 20px;
+}

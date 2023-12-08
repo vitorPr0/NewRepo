@@ -1,0 +1,14 @@
+﻿.a span{
+    text-decoration:none;
+    color:black;
+}
+h1{
+    text-align:center;
+    margin:0 auto;
+}
+.a{
+    background-color:powderblue;
+    padding:5px;
+    font-size:15px;
+    border-radius:5px
+}

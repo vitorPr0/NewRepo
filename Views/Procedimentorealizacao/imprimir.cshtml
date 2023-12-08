@@ -1,0 +1,73 @@
+﻿@model ProjetoFinalVitor.Models.Procedimentorealizacao
+
+@{
+     Layout = null;
+}
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatorio</title>
+    <link rel="stylesheet" href="~/css/Imprimir.css" />
+</head>
+<body>
+    <main class="geral">
+        <header class="heder">
+            <img class="logo" src="~/img/loog.png" alt="#">
+
+        </header>
+        <div class="geralzim">
+            <h1 class="nome">Laboratório VFR</h1>
+            <div class="ide">
+                <span class="fontepri">Paciente:</span>
+                <span class="info">@Html.DisplayFor(model => model.Cliente.ClienteNome)</span>
+                <div>
+                    <span class="fonteprim">Sexo do Paciente:</span>
+                    <span class="info">@Html.DisplayFor(model => model.Cliente.ClienteSexo)</span>
+                    <span class="fonteprim">Idade do Paciente:</span>
+                    <span class="info">78</span>
+                    <span class="fonteprim">Clinica:</span>
+                    <span class="info">VFR</span>
+                </div>
+
+            </div>
+            <div class="box-2">
+                <div class="iza">
+                    <span class="izale">@Html.DisplayFor(model => model.Procedimento.ProcedimentoNome)</span>
+                    <div>
+                        <span>Dosagem no soro</span>
+                    </div>
+
+                </div>
+                <div class="diahora">
+                    <span>@Html.DisplayFor(model => model.DataRealizacao)</span>
+                    <span>@Html.DisplayFor(model => model.DataRealizacao)</span>
+                    <div>
+                        <span>Hora:</span>
+                        <span>07:45</span>
+                    </div>
+                </div>
+            </div>
+            <hr size="2" style="border:1px dashed black;">
+            <div>
+                <div class="resultado">
+                    <h3 style=" margin-top: 5px;">Resultado:</h3>
+                    <h4 style=" margin-top: 8px;">@Html.DisplayFor(model => model.ObservacaoRealizacao)</h4>
+                </div>
+                <div class="refe">
+                    <span style="display: block" class="fontepri">Valores de Referência:</span>
+                    <span class="fonteprim">Mulher:</span>
+                    <span class="infor">0,7-1,3mg/dl</span>
+                    <span class="fonteprim">Homem:</span>
+                    <span class="infor">0,7-1,3mg/dl</span>
+                </div>
+            </div>
+            <hr size="2" style="border:1px dashed black;">
+            <div class="meto">
+                <span>Metodologia:</span>
+                <span>Jaffé Automatizado</span>
+            </div>
+        </div>
+    </main>
+</body>

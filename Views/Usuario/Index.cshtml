@@ -1,0 +1,58 @@
+﻿@model IEnumerable<ProjetoFinalVitor.Models.Usuario>
+
+@{
+    ViewData["Title"] = "Index";
+}
+<link rel="stylesheet" href="~/css/site.css" />
+<link rel="stylesheet" href="~/css/butos.css" />
+<h1>Usuarios</h1>
+
+<p>
+    <a class="a" asp-action="Create">Criar Usuario</a>
+</p>
+<div>
+    @using (Html.BeginForm("Index", "Usuario", FormMethod.Get))
+    {
+
+            <p class="search">
+                Buscar: @Html.TextBox("pesquisa")
+                <input class="pesquisa" type="submit" value="Pesquisar" />
+            </p>
+    }
+</div>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.UsuarioNome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UsuarioEmail)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Senha)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.UsuarioNome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UsuarioEmail)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Senha)
+            </td>
+                <td class="lado">
+                    <a class="a" asp-action="Edit" asp-route-id="@item.Id"><span>Editar</span></a> |
+                    <a class="a" asp-action="Details" asp-route-id="@item.Id"><span>Detalhes</span></a> |
+                    <a class="a" asp-action="Delete" asp-route-id="@item.Id"><span>Deletar</span></a>
+                </td>
+        </tr>
+}
+    </tbody>
+</table>

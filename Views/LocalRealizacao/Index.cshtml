@@ -1,0 +1,42 @@
+﻿@model IEnumerable<ProjetoFinalVitor.Models.LocalRealizacao>
+
+@{
+    ViewData["Title"] = "Index";
+}
+<link rel="stylesheet" href="~/css/site.css" />
+<link rel="stylesheet" href="~/css/butos.css" />
+<h1>Locais da Realizações</h1>
+
+<p>
+    <a class="a" asp-action="Create">Adicionar Local da Realização</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.LocalNome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cidade)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.LocalNome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cidade.CidadeNome)
+            </td>
+                <td class="lado">
+                    <a class="a" asp-action="Edit" asp-route-id="@item.Id"><span>Editar</span></a> |
+                    <a class="a" asp-action="Details" asp-route-id="@item.Id"><span>Detalhes</span></a> |
+                    <a class="a" asp-action="Delete" asp-route-id="@item.Id"><span>Deletar</span></a>
+                </td>
+        </tr>
+}
+    </tbody>
+</table>

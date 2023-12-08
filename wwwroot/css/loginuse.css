@@ -1,0 +1,54 @@
+﻿body {
+    background-image: radial-gradient(rgba(40, 40, 40, 0.57), rgba(0, 0, 0, 1.9)), url("/img/fundo.jpg") !important;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 99%;
+    height: 480px;
+    color: white;
+}
+h1{
+    text-align:center;
+
+}
+.header-form {
+    margin-top: 50px;
+}
+.header-passo {
+    text-align: center;
+    margin-top: 100px;
+}
+label{
+    display:block;
+    text-align:justify;
+    margin-left:513px;
+}
+input {
+    width: 500px;
+    height: 50px;
+    border-radius: 10px;
+}
+.input-field > label{
+    margin-bottom:8px;
+}
+.input-field2 > label {
+    margin-bottom: 8px;
+}
+.input-field2 {
+    margin-top: 20px;
+
+}
+img{
+    width:150px;
+    height:130px;
+}
+input {
+    background-color: #defff666;
+}
+.b {
+    font-size: 20px;
+    border:none;
+    border-radius:10px;
+}
+span{
+    display:block;
+}

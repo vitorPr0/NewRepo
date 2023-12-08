@@ -1,0 +1,77 @@
+﻿@model IEnumerable<ProjetoFinalVitor.Models.Procedimentorealizacao>
+
+@{
+    ViewData["Title"] = "Index";
+}
+<link rel="stylesheet" href="~/css/site.css" />
+<link rel="stylesheet" href="~/css/butos.css" />
+<h1>Realizações</h1>
+
+<p>
+    <a class="a" asp-action="Create">Adicionar procedimento realização</a>
+</p>
+<div>
+    @using (Html.BeginForm("Index", "Procedimentorealizacao", FormMethod.Get))
+    {
+
+        <p class="search">
+            Buscar: @Html.TextBox("pesquisa")
+            <input class="pesquisa" type="submit" value="Pesquisar" />
+        </p>
+    }
+</div>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Cliente)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Procedimento)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Colaborador)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LocalRealizacao)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DataRealizacao)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ObservacaoRealizacao)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                    @Html.DisplayFor(modelItem => item.Cliente.ClienteNome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Procedimento.ProcedimentoNome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Colaborador.ColaboradorNome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LocalRealizacao.LocalNome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataRealizacao)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ObservacaoRealizacao)
+            </td>
+                <td class="lado">
+                    <a class="a" asp-action="Edit" asp-route-id="@item.Id"><span>Editar</span></a> |
+                    <a class="a" asp-action="Details" asp-route-id="@item.Id"><span>Detalhes</span></a> |
+                    <a class="a" asp-action="Delete" asp-route-id="@item.Id"><span>Deletar</span></a> |
+                <a class="a" asp-action="Imprimir" asp-route-id="@item.Id" target="_blank"><span>Imprimir</span></a>
+                </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,0 +1,30 @@
+﻿@model ProjetoFinalVitor.Models.Usuario
+@{
+    Layout = null;
+}
+<link rel="stylesheet" href="~/css/loginuse.css" />
+<link rel="stylesheet" href="~/css/butos.css" />
+<header class="caixa" >
+                <div class="header-passo">
+                    <img src="~/img/loog.png"/>
+                    <h1>Faça o login para acessar o sistema</h1>
+                    <form action="" class="header-form">
+                    <div class="input-field">
+                            <label  asp-for="UsuarioEmail"></label>
+                            <input  class="oi" asp-for="UsuarioEmail" />
+                            <span asp-validation-for="UsuarioEmail"></span>
+                    </div>
+                    <div  class="input-field2">
+                        <label  asp-for="Senha"></label>
+                        <input class="oi" asp-for="Senha" type="password" />
+                         <span asp-validation-for="Senha"></span>
+                    </div>
+                    <br />
+                    <h4>@ViewBag.Mensagem</h4>
+                    <br />
+                    <div>
+                        <input style="background-color: powderblue;" class="b" type="submit" value="Entrar" />
+                    </div>
+                    </form>
+                </div>
+</header>
